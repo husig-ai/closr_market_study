@@ -1156,6 +1156,253 @@
             margin-bottom: 3rem;
         }
 
+        /* Executive Summary Text Box */
+        .summary-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .summary-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .summary-header {
+            margin-bottom: 1.5rem;
+        }
+
+        .summary-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            margin-bottom: 0.75rem;
+        }
+
+        .summary-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text);
+            margin: 0;
+        }
+
+        .summary-recommendation {
+            margin-bottom: 1.5rem;
+        }
+
+        .rec-badge {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            border-radius: 8px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .rec-badge.yes {
+            background: rgba(74, 222, 128, 0.15);
+            color: var(--success);
+            border: 2px solid var(--success);
+        }
+
+        .rec-badge.no {
+            background: rgba(248, 113, 113, 0.15);
+            color: var(--danger);
+            border: 2px solid var(--danger);
+        }
+
+        .rec-badge.maybe {
+            background: rgba(251, 191, 36, 0.15);
+            color: var(--warning);
+            border: 2px solid var(--warning);
+        }
+
+        .summary-content {
+            color: var(--text);
+        }
+
+        .summary-lead {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .summary-lead strong {
+            color: var(--text);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .summary-section {
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .summary-section.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .summary-section h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .summary-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .summary-section li {
+            padding: 0.5rem 0;
+            padding-left: 1rem;
+            position: relative;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .summary-section li:last-child {
+            border-bottom: none;
+        }
+
+        .summary-section li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .summary-section li strong {
+            color: var(--text);
+        }
+
+        .mvp-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .mvp-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+
+        .mvp-priority {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+        }
+
+        .priority-1 .mvp-priority {
+            background: rgba(74, 222, 128, 0.2);
+            color: var(--success);
+        }
+
+        .priority-2 .mvp-priority {
+            background: rgba(251, 191, 36, 0.2);
+            color: var(--warning);
+        }
+
+        .mvp-feature {
+            color: var(--text);
+        }
+
+        .risks-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .risk-item {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 1rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+
+        .risk-item:last-child {
+            border-bottom: none;
+        }
+
+        .risk-title {
+            color: var(--warning);
+            font-weight: 500;
+        }
+
+        .risk-mitigation {
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .risk-item {
+                grid-template-columns: 1fr;
+                gap: 0.25rem;
+            }
+        }
+
+        .summary-bottom {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--primary);
+        }
+
+        .bottom-line {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+
+        .bottom-line strong {
+            color: var(--primary);
+        }
+
         /* Heatmap Styles */
         .heatmap-grid {
             display: grid;
@@ -1245,7 +1492,8 @@
     </header>
 
     <nav class="nav-sidebar">
-        <div class="nav-dot active" data-section="exec" title="Executive Summary"></div>
+        <div class="nav-dot active" data-section="summary-text" title="Summary"></div>
+        <div class="nav-dot" data-section="exec" title="Executive Summary"></div>
         <div class="nav-dot" data-section="opportunity" title="Opportunity Score"></div>
         <div class="nav-dot" data-section="maturity" title="AI Maturity"></div>
         <div class="nav-dot" data-section="pain" title="Pain Points"></div>
@@ -1258,6 +1506,116 @@
     </nav>
 
     <main class="container">
+        <!-- Executive Summary Text -->
+        <section id="summary-text" class="animate-in">
+            <div class="summary-box">
+                <div class="summary-header">
+                    <div class="summary-badge">EXECUTIVE SUMMARY</div>
+                    <h1 class="summary-title">Should Husig Build LeadNest?</h1>
+                </div>
+                <div class="summary-recommendation">
+                    <div class="rec-badge yes">YES — STRONG GO</div>
+                </div>
+                <div class="summary-content">
+                    <p class="summary-lead">Based on analysis of 17 survey responses from real estate professionals, <strong>LeadNest demonstrates clear market validation</strong> with strong demand signals across all key metrics.</p>
+                    
+                    <div class="summary-grid">
+                        <div class="summary-section">
+                            <h3>🎯 Market Opportunity</h3>
+                            <ul>
+                                <li><strong>71% beta interest</strong> — 10 respondents said "Yes, definitely" to early access, with 5 more as "Maybe"</li>
+                                <li><strong>59% want automation</strong> — "Yes, absolutely" to auto follow-ups and appointment booking</li>
+                                <li><strong>47% willing to pay $50+/month</strong> — Sweet spot pricing tier at $50-99/mo</li>
+                                <li><strong>35% have no CRM</strong> — 6 respondents are greenfield opportunities with no incumbent to displace</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="summary-section">
+                            <h3>🔥 Pain Points to Solve</h3>
+                            <ul>
+                                <li><strong>#1: Too many unqualified leads</strong> (9 mentions, 53%) — AI lead qualification is the top priority</li>
+                                <li><strong>#2: Leads go cold</strong> (7 mentions, 41%) — Automated follow-up sequences are critical</li>
+                                <li><strong>#3: Slow follow-up time</strong> (7 mentions, 41%) — Speed-to-lead automation needed</li>
+                                <li><strong>#4: Manual data entry</strong> (5 mentions, 29%) — CRM auto-population from conversations</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="summary-section">
+                            <h3>⭐ Must-Have Features</h3>
+                            <ul>
+                                <li><strong>Smart follow-up reminders</strong> — 14 requests (82%)</li>
+                                <li><strong>Automatic lead qualification</strong> — 12 requests (71%)</li>
+                                <li><strong>Personalized property recommendations</strong> — 12 requests (71%)</li>
+                                <li><strong>Email/SMS automation</strong> — 10 requests (59%)</li>
+                                <li><strong>Market insights & price prediction</strong> — 9 requests (53%)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="summary-section">
+                            <h3>👥 Target Customer Profile</h3>
+                            <ul>
+                                <li><strong>Experience:</strong> 1-7 years (76% of respondents)</li>
+                                <li><strong>Volume:</strong> 6-30 transactions/year (mid-tier producers)</li>
+                                <li><strong>Structure:</strong> Independent agents (59%) and small teams</li>
+                                <li><strong>Focus:</strong> Primarily residential (65%)</li>
+                                <li><strong>Current state:</strong> Using manual notes or basic CRM, spending 2-5 hours/week on lead tasks</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-section full-width">
+                        <h3>📋 Recommended MVP Scope</h3>
+                        <div class="mvp-features">
+                            <div class="mvp-item priority-1">
+                                <span class="mvp-priority">P1</span>
+                                <span class="mvp-feature">AI Lead Scoring & Qualification</span>
+                            </div>
+                            <div class="mvp-item priority-1">
+                                <span class="mvp-priority">P1</span>
+                                <span class="mvp-feature">Automated Follow-up Sequences (SMS/WhatsApp)</span>
+                            </div>
+                            <div class="mvp-item priority-1">
+                                <span class="mvp-priority">P1</span>
+                                <span class="mvp-feature">Message Review Mode (human-in-loop option)</span>
+                            </div>
+                            <div class="mvp-item priority-2">
+                                <span class="mvp-priority">P2</span>
+                                <span class="mvp-feature">Property Matching Recommendations</span>
+                            </div>
+                            <div class="mvp-item priority-2">
+                                <span class="mvp-priority">P2</span>
+                                <span class="mvp-feature">Calendar/Appointment Booking</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-section full-width">
+                        <h3>⚠️ Key Risks & Mitigations</h3>
+                        <div class="risks-grid">
+                            <div class="risk-item">
+                                <div class="risk-title">Small sample size (n=17)</div>
+                                <div class="risk-mitigation">→ Run larger survey or validate with paid ads landing page test</div>
+                            </div>
+                            <div class="risk-item">
+                                <div class="risk-title">6 respondents prefer manual communication</div>
+                                <div class="risk-mitigation">→ Include message approval workflow as a core feature</div>
+                            </div>
+                            <div class="risk-item">
+                                <div class="risk-title">Budget sensitivity (8 want to pay &lt;$50)</div>
+                                <div class="risk-mitigation">→ Consider freemium tier or usage-based pricing</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="summary-bottom">
+                        <div class="bottom-line">
+                            <strong>Bottom Line:</strong> The data shows a clear market need with strong willingness to adopt and pay. Recommend proceeding with MVP development focused on lead qualification and automated follow-ups, with 10 confirmed beta testers ready to provide feedback.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Executive Summary -->
         <section id="exec" class="animate-in">
             <div class="section-header">
@@ -2279,80 +2637,81 @@
         renderRecommendations();
         renderRawDataTable();
 
-        // Raw Data Table
+        // Raw Data Table - using index-based access for reliability
         function renderRawDataTable() {
-            const displayHeaders = [
-                { key: col.timestamp, label: '#', width: '50px' },
-                { key: col.name, label: 'Name', width: '150px' },
-                { key: col.company, label: 'Company', width: '150px' },
-                { key: col.email, label: 'Email', width: '200px' },
-                { key: col.experience, label: 'Experience', width: '100px' },
-                { key: col.transactions, label: 'Transactions', width: '100px' },
-                { key: col.propertyType, label: 'Property Type', width: '120px' },
-                { key: col.workStructure, label: 'Work Structure', width: '150px' },
-                { key: col.hasCRM, label: 'Has CRM', width: '80px' },
-                { key: col.whichCRM, label: 'CRM Used', width: '120px' },
-                { key: col.aiUsage, label: 'AI Usage', width: '150px' },
-                { key: col.aiComfort, label: 'AI Comfort', width: '80px' },
-                { key: col.budget, label: 'Budget', width: '100px' },
-                { key: col.betaInterest, label: 'Beta Interest', width: '130px' },
-                { key: col.biggestChallenge, label: 'Challenges', width: '200px' },
-                { key: col.wantedFeatures, label: 'Wanted Features', width: '200px' },
-                { key: col.idealAITask, label: 'Ideal AI Task', width: '150px' },
-                { key: col.autoFollowup, label: 'Auto Follow-up', width: '150px' },
-                { key: col.responseTime, label: 'Response Time', width: '130px' },
-                { key: col.weeklyTime, label: 'Weekly Time', width: '120px' },
-                { key: col.preferredTool, label: 'Preferred Tool', width: '180px' },
+            // Define columns by their index in the original CSV (more reliable than header string matching)
+            const tableColumns = [
+                { idx: null, label: '#', width: '50px', isRowNum: true },
+                { idx: 24, label: 'Name', width: '150px', isName: true },
+                { idx: 26, label: 'Company', width: '150px' },
+                { idx: 25, label: 'Email', width: '200px', isEmail: true },
+                { idx: 1, label: 'Experience', width: '100px' },
+                { idx: 2, label: 'Transactions', width: '100px' },
+                { idx: 3, label: 'Property Type', width: '120px' },
+                { idx: 5, label: 'Work Structure', width: '150px' },
+                { idx: 6, label: 'Has CRM', width: '80px' },
+                { idx: 7, label: 'CRM Used', width: '120px' },
+                { idx: 11, label: 'AI Usage', width: '150px' },
+                { idx: 12, label: 'AI Comfort', width: '80px' },
+                { idx: 22, label: 'Budget', width: '100px' },
+                { idx: 23, label: 'Beta Interest', width: '130px' },
+                { idx: 14, label: 'Challenges', width: '200px' },
+                { idx: 13, label: 'Wanted Features', width: '200px' },
+                { idx: 15, label: 'Ideal AI Task', width: '150px' },
+                { idx: 19, label: 'Auto Follow-up', width: '150px' },
+                { idx: 17, label: 'Response Time', width: '130px' },
+                { idx: 20, label: 'Weekly Time', width: '120px' },
+                { idx: 21, label: 'Preferred Tool', width: '180px' },
             ];
 
             // Render header
             document.getElementById('tableHead').innerHTML = `
                 <tr>
-                    ${displayHeaders.map(h => `<th style="min-width: ${h.width}">${h.label}</th>`).join('')}
+                    ${tableColumns.map(c => `<th style="min-width: ${c.width}">${c.label}</th>`).join('')}
                     <th style="min-width: 80px">Actions</th>
                 </tr>
             `;
 
             // Render body
-            renderTableRows(data, displayHeaders);
+            renderTableRows(data, tableColumns);
 
             // Search functionality
             document.getElementById('tableSearch').addEventListener('input', (e) => {
                 const searchTerm = e.target.value.toLowerCase();
-                const filteredData = data.filter(row => {
+                const filteredData = data.filter((row, idx) => {
                     return Object.values(row).some(val => 
                         (val || '').toString().toLowerCase().includes(searchTerm)
                     );
                 });
-                renderTableRows(filteredData, displayHeaders);
+                renderTableRows(filteredData, tableColumns);
                 document.getElementById('tableCount').textContent = `${filteredData.length} of ${data.length} responses`;
             });
         }
 
-        function renderTableRows(rowData, displayHeaders) {
-            document.getElementById('tableBody').innerHTML = rowData.map((row, index) => {
-                const name = row[col.name] || `Respondent ${index + 1}`;
+        function renderTableRows(rowData, tableColumns) {
+            document.getElementById('tableBody').innerHTML = rowData.map((row, rowIndex) => {
+                // Get values array from the row object using headers
+                const values = headers.map(h => row[h] || '');
+                
                 return `
-                    <tr data-index="${index}">
-                        ${displayHeaders.map((h, i) => {
-                            if (i === 0) {
-                                return `<td class="row-number">${index + 1}</td>`;
+                    <tr data-index="${rowIndex}">
+                        ${tableColumns.map((c, colIndex) => {
+                            if (c.isRowNum) {
+                                return `<td class="row-number">${rowIndex + 1}</td>`;
                             }
-                            const value = row[h.key] || '—';
-                            const isName = h.key === col.name;
-                            const isEmail = h.key === col.email;
+                            const value = values[c.idx] || '—';
                             const isTruncate = value.length > 30;
                             
                             let cellClass = '';
-                            if (isName) cellClass = 'name-cell';
-                            if (isEmail) cellClass = 'email-cell';
+                            if (c.isName) cellClass = 'name-cell';
+                            if (c.isEmail) cellClass = 'email-cell';
                             
                             const displayValue = isTruncate ? value.substring(0, 30) + '...' : value;
                             
                             return `<td class="${cellClass}" title="${escapeHtml(value)}">${escapeHtml(displayValue)}</td>`;
                         }).join('')}
                         <td>
-                            <button class="expand-btn" onclick="showRowDetail(${index})">View All</button>
+                            <button class="expand-btn" onclick="showRowDetail(${rowIndex})">View All</button>
                         </td>
                     </tr>
                 `;
@@ -2367,7 +2726,8 @@
 
         function showRowDetail(index) {
             const row = data[index];
-            const name = row[col.name] || `Respondent ${index + 1}`;
+            const values = headers.map(h => row[h] || '');
+            const name = values[24] || `Respondent ${index + 1}`;
             
             // Create modal if it doesn't exist
             let modal = document.getElementById('rowDetailModal');
@@ -2395,41 +2755,42 @@
             // Populate modal
             document.getElementById('modalTitle').textContent = name;
             
-            const fieldLabels = {
-                [col.timestamp]: 'Submitted',
-                [col.name]: 'Name',
-                [col.email]: 'Email',
-                [col.company]: 'Company',
-                [col.experience]: 'Experience',
-                [col.transactions]: 'Annual Transactions',
-                [col.propertyType]: 'Property Focus',
-                [col.leadSources]: 'Lead Sources',
-                [col.workStructure]: 'Work Structure',
-                [col.hasCRM]: 'Uses CRM',
-                [col.whichCRM]: 'CRM System',
-                [col.crmFrequency]: 'CRM Check Frequency',
-                [col.orgRating]: 'Organization Rating',
-                [col.trackingMethod]: 'Lead Tracking Method',
-                [col.aiUsage]: 'AI Tool Usage',
-                [col.aiComfort]: 'AI Comfort Level',
-                [col.wantedFeatures]: 'Wanted Features',
-                [col.biggestChallenge]: 'Biggest Challenges',
-                [col.idealAITask]: 'Ideal AI Task',
-                [col.contactPreference]: 'Contact Preference',
-                [col.responseTime]: 'Response Time',
-                [col.followupCount]: 'Follow-ups Before Cold',
-                [col.autoFollowup]: 'Auto Follow-up Interest',
-                [col.weeklyTime]: 'Weekly Time on Leads',
-                [col.preferredTool]: 'Preferred Tool Type',
-                [col.budget]: 'Monthly Budget',
-                [col.betaInterest]: 'Beta Interest'
-            };
+            // Define fields by index with labels
+            const fieldDefs = [
+                { idx: 0, label: 'Submitted' },
+                { idx: 24, label: 'Name' },
+                { idx: 25, label: 'Email' },
+                { idx: 26, label: 'Company' },
+                { idx: 1, label: 'Experience' },
+                { idx: 2, label: 'Annual Transactions' },
+                { idx: 3, label: 'Property Focus' },
+                { idx: 4, label: 'Lead Sources' },
+                { idx: 5, label: 'Work Structure' },
+                { idx: 6, label: 'Uses CRM' },
+                { idx: 7, label: 'CRM System' },
+                { idx: 8, label: 'CRM Check Frequency' },
+                { idx: 9, label: 'Organization Rating' },
+                { idx: 10, label: 'Lead Tracking Method' },
+                { idx: 11, label: 'AI Tool Usage' },
+                { idx: 12, label: 'AI Comfort Level' },
+                { idx: 13, label: 'Wanted Features' },
+                { idx: 14, label: 'Biggest Challenges' },
+                { idx: 15, label: 'Ideal AI Task' },
+                { idx: 16, label: 'Contact Preference' },
+                { idx: 17, label: 'Response Time' },
+                { idx: 18, label: 'Follow-ups Before Cold' },
+                { idx: 19, label: 'Auto Follow-up Interest' },
+                { idx: 20, label: 'Weekly Time on Leads' },
+                { idx: 21, label: 'Preferred Tool Type' },
+                { idx: 22, label: 'Monthly Budget' },
+                { idx: 23, label: 'Beta Interest' }
+            ];
 
-            document.getElementById('modalGrid').innerHTML = Object.entries(fieldLabels).map(([key, label]) => {
-                const value = row[key] || '—';
+            document.getElementById('modalGrid').innerHTML = fieldDefs.map(field => {
+                const value = values[field.idx] || '—';
                 return `
                     <div class="detail-item">
-                        <div class="detail-item-label">${label}</div>
+                        <div class="detail-item-label">${field.label}</div>
                         <div class="detail-item-value">${escapeHtml(value)}</div>
                     </div>
                 `;
